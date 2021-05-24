@@ -13,6 +13,7 @@ soup = BeautifulSoup(response.content, 'html.parser')
 title = soup.find_all(class_="gs-c-promo-heading__title gel-pica-bold nw-o-link-split__text")
 title.insert(0, soup.find(class_="gs-c-promo-heading__title gel-paragon-bold nw-o-link-split__text"))
 country = soup.find_all(class_="gs-c-section-link gs-c-section-link--truncate nw-c-section-link nw-o-link nw-o-link--no-visited-state")
+country = country[:17]
 c = country.pop(0)
 
 
